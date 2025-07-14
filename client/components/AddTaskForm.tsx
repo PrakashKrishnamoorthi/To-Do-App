@@ -112,9 +112,44 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
           </div>
 
           {/* Options Row */}
-          <div className="flex gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {/* Status Select */}
+            <div>
+              <Select
+                value={status}
+                onValueChange={(value) => setStatus(value as TaskStatus)}
+              >
+                <SelectTrigger className="h-9">
+                  <div className="flex items-center gap-2">
+                    <Activity className="h-3 w-3" />
+                    <SelectValue />
+                  </div>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="not_started">
+                    <div className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-gray-400" />
+                      <span>Not Started</span>
+                    </div>
+                  </SelectItem>
+                  <SelectItem value="in_progress">
+                    <div className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-blue-500" />
+                      <span>In Progress</span>
+                    </div>
+                  </SelectItem>
+                  <SelectItem value="completed">
+                    <div className="flex items-center gap-2">
+                      <div className="h-2 w-2 rounded-full bg-green-500" />
+                      <span>Completed</span>
+                    </div>
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
             {/* Priority Select */}
-            <div className="flex-1">
+            <div>
               <Select
                 value={priority}
                 onValueChange={(value) => setPriority(value as TaskPriority)}
@@ -149,7 +184,7 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
             </div>
 
             {/* Due Date Input */}
-            <div className="flex-1">
+            <div>
               <div className="relative">
                 <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-3 w-3 text-muted-foreground" />
                 <Input
