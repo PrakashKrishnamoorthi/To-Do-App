@@ -9,8 +9,10 @@ import {
   Trash2,
   AlertTriangle,
   Flag,
+  Play,
+  Pause,
 } from "lucide-react";
-import { Task, TaskPriority } from "@shared/tasks";
+import { Task, TaskPriority, TaskStatus } from "@shared/tasks";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
