@@ -56,10 +56,13 @@ export const TaskManager: React.FC<TaskManagerProps> = ({ className }) => {
   }, [actions.setFilter]);
 
   const handleAddTaskClick = () => {
-    addTaskFormRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+    setIsAddTaskExpanded(true);
+    setTimeout(() => {
+      addTaskFormRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }, 100);
   };
 
   const handleClearCompleted = () => {
