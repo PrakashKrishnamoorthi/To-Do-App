@@ -56,13 +56,13 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
     return (
       <Card
         className={cn(
-          "border-dashed border-2 hover:border-primary/50 transition-colors cursor-pointer",
+          "border-dashed border-2 hover:border-primary/50 transition-material cursor-pointer hover:shadow-material-1",
           className,
         )}
         onClick={() => setIsExpanded(true)}
       >
         <CardContent className="flex items-center justify-center py-8">
-          <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+          <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-material">
             <Plus className="h-5 w-5" />
             <span className="text-sm font-medium">Add a new task</span>
           </div>
