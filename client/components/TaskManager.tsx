@@ -18,6 +18,7 @@ interface TaskManagerProps {
 export const TaskManager: React.FC<TaskManagerProps> = ({ className }) => {
   const { state, filteredTasks, taskStats, actions } = useTaskReducer();
   const addTaskFormRef = useRef<HTMLDivElement>(null);
+  const [isAddTaskExpanded, setIsAddTaskExpanded] = React.useState(false);
 
   // Setup localStorage persistence
   useTaskPersistence({
