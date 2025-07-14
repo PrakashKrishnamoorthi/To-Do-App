@@ -1,23 +1,14 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build:static",
   "devCommand": "npm run dev",
-  "outputDirectory": "dist/spa",
+  "outputDirectory": "dist",
   "framework": "vite",
   "installCommand": "npm install",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/dist/server/node-build.mjs"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "functions": {
-    "dist/server/node-build.mjs": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }
