@@ -22,7 +22,9 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build",
     "build:server": "vite build --config vite.config.server.ts",
+    "build:static": "vite build",
     "start": "node dist/server/node-build.mjs",
+    "preview": "vite preview",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc"
