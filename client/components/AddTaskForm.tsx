@@ -55,7 +55,8 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
 
     onAddTask({
       title: title.trim(),
-      completed: false,
+      completed: status === "completed",
+      status,
       priority,
       dueDate: dueDate || undefined,
     });
@@ -63,6 +64,7 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
     // Reset form
     setTitle("");
     setPriority("medium");
+    setStatus("not_started");
     setDueDate("");
     setIsExpanded(false);
   };
