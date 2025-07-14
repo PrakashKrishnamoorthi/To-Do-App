@@ -149,7 +149,7 @@ export const TaskManager: React.FC<TaskManagerProps> = ({ className }) => {
       <div className="fixed bottom-6 right-6 md:hidden">
         <Button
           size="icon"
-          className="h-14 w-14 rounded-full shadow-lg"
+          className="h-14 w-14 rounded-full shadow-material-6 hover:shadow-material-8 transition-material"
           onClick={handleAddTaskClick}
         >
           <Plus className="h-6 w-6" />
