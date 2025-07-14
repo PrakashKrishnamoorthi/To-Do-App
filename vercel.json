@@ -2,7 +2,7 @@
   "version": 2,
   "buildCommand": "npm run build:static",
   "devCommand": "npm run dev",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/spa",
   "framework": "vite",
   "installCommand": "npm install",
   "rewrites": [
