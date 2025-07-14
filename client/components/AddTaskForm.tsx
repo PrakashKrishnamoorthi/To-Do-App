@@ -23,11 +23,31 @@ interface AddTaskFormProps {
 export const AddTaskForm: React.FC<AddTaskFormProps> = ({
   onAddTask,
   className,
+  isExpanded: controlledExpanded,
+  onExpandedChange,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [internalExpanded, setInternalExpanded] = useState(false);
   const [title, setTitle] = useState("");
   const [priority, setPriority] = useState<TaskPriority>("medium");
+  const [status, setStatus] = useState<TaskStatus>("not_started");
   const [dueDate, setDueDate] = useState("");
+
+  const isExpanded =
+    controlledExpanded !== undefined ? controlledExpanded : internalExpanded;
+
+  const setIsExpanded = (expanded: boolean) => {
+    if (onExpandedChange) {
+      onExpandedChange(expanded);
+    } else {
+      setInternalExpanded(expanded);
+    }
+  };
+
+  useEffect(() => {
+    if (controlledExpanded) {
+      setInternalExpanded(controlledExpanded);
+    }
+  }, [controlledExpanded]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
