@@ -39,6 +39,11 @@ function taskReducer(state: TaskState, action: TaskAction): TaskState {
             ? {
                 ...task,
                 completed: !task.completed,
+                status: !task.completed
+                  ? "completed"
+                  : task.status === "completed"
+                    ? "not_started"
+                    : task.status,
                 completedAt: !task.completed ? now : undefined,
               }
             : task,
