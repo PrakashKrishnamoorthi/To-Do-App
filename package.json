@@ -1,5 +1,7 @@
 {
-  "name": "fusion-starter",
+  "name": "taskflow",
+  "version": "1.0.0",
+  "description": "A modern, beautiful task management application built with React, TypeScript, and Tailwind CSS",
   "private": true,
   "type": "module",
   "pkg": {
