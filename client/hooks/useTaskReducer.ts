@@ -21,6 +21,7 @@ function taskReducer(state: TaskState, action: TaskAction): TaskState {
         ...action.payload,
         id: Date.now() + Math.random(), // Simple ID generation
         createdAt: new Date().toISOString(),
+        completed: action.payload.status === "completed",
       };
       return {
         ...state,
