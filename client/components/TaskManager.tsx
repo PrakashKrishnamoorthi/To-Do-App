@@ -50,7 +50,7 @@ export const TaskManager: React.FC<TaskManagerProps> = ({ className }) => {
   return (
     <div className={cn("min-h-screen bg-background", className)}>
       {/* Header */}
-      <header className="border-b bg-card shadow-sm">
+      <header className="border-b bg-card shadow-material-2">
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
