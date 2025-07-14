@@ -26,6 +26,34 @@ export const TaskManager: React.FC<TaskManagerProps> = ({ className }) => {
     onError: actions.setError,
   });
 
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Ctrl/Cmd + K to focus add task
+      if ((event.ctrlKey || event.metaKey) && event.key === "k") {
+        event.preventDefault();
+        handleAddTaskClick();
+      }
+      // Ctrl/Cmd + 1,2,3 for filter shortcuts
+      if (
+        (event.ctrlKey || event.metaKey) &&
+        event.key >= "1" &&
+        event.key <= "3"
+      ) {
+        event.preventDefault();
+        const filters: ("all" | "active" | "completed")[] = [
+          "all",
+          "active",
+          "completed",
+        ];
+        actions.setFilter(filters[parseInt(event.key) - 1]);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [actions.setFilter]);
+
   const handleAddTaskClick = () => {
     addTaskFormRef.current?.scrollIntoView({
       behavior: "smooth",
