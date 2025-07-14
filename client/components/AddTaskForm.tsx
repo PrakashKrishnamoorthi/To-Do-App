@@ -72,7 +72,7 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
   }
 
   return (
-    <Card className={cn("border-primary/50", className)}>
+    <Card className={cn("border-primary/50 shadow-material-2", className)}>
       <CardContent className="p-4">
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Title Input */}
