@@ -37,6 +37,8 @@ export const storage = {
           typeof task.id === "number" &&
           typeof task.title === "string" &&
           typeof task.completed === "boolean" &&
+          typeof task.status === "string" &&
+          ["not_started", "in_progress", "completed"].includes(task.status) &&
           typeof task.priority === "string" &&
           ["low", "medium", "high"].includes(task.priority) &&
           typeof task.createdAt === "string"
