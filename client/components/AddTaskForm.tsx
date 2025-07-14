@@ -16,6 +16,8 @@ import { cn } from "@/lib/utils";
 interface AddTaskFormProps {
   onAddTask: (task: Omit<Task, "id" | "createdAt">) => void;
   className?: string;
+  isExpanded?: boolean;
+  onExpandedChange?: (expanded: boolean) => void;
 }
 
 export const AddTaskForm: React.FC<AddTaskFormProps> = ({
