@@ -8,6 +8,7 @@ export interface Task {
   id: number;
   title: string;
   completed: boolean;
+  status: TaskStatus;
   dueDate?: string; // ISO date string
   priority: TaskPriority;
   createdAt: string; // ISO date string
