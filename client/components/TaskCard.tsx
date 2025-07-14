@@ -95,11 +95,11 @@ export const TaskCard: React.FC<TaskCardProps> = ({
   return (
     <div
       className={cn(
-        "group relative rounded-lg border bg-card p-4 shadow-sm transition-all duration-200 hover:shadow-md",
+        "group relative rounded-lg border bg-card p-4 shadow-material-1 transition-material hover:shadow-material-2",
         task.completed && "opacity-60",
         isOverdue &&
           !task.completed &&
-          "border-destructive/50 bg-destructive/5",
+          "border-destructive/50 bg-destructive/5 shadow-material-2",
       )}
     >
       <div className="flex items-start gap-3">
