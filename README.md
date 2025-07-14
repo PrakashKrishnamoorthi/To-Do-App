@@ -17,7 +17,7 @@ A beautiful, modern task management application built with React, TypeScript, an
 
 ## ✨ Features
 
-### ���� **Core Task Management**
+### 🎯 **Core Task Management**
 
 - ✅ **Create, Edit, and Delete Tasks** - Full CRUD operations with intuitive interface
 - 📊 **Task Status Tracking** - Not Started, In Progress, Completed states
@@ -58,7 +58,17 @@ A beautiful, modern task management application built with React, TypeScript, an
    cd taskflow
    ```
 
-2. **Install dependencies**
+2. **Configure Git (Important!)**
+
+   ```bash
+   # Set your name and email for proper commit attribution
+   git config --global user.name "Your Name"
+   git config --global user.email "your-email@example.com"
+   ```
+
+   > 📝 See [GIT_SETUP.md](GIT_SETUP.md) for detailed instructions
+
+3. **Install dependencies**
 
    ```bash
    npm install
@@ -66,7 +76,7 @@ A beautiful, modern task management application built with React, TypeScript, an
    yarn install
    ```
 
-3. **Start the development server**
+4. **Start the development server**
 
    ```bash
    npm run dev
@@ -74,7 +84,7 @@ A beautiful, modern task management application built with React, TypeScript, an
    yarn dev
    ```
 
-4. **Open your browser**
+5. **Open your browser**
    Navigate to `http://localhost:8080` to see the application running.
 
 ### Production Build
