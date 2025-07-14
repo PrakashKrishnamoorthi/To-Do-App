@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Plus, Calendar, Flag } from "lucide-react";
-import { Task, TaskPriority } from "@shared/tasks";
+import React, { useState, useEffect } from "react";
+import { Plus, Calendar, Flag, Activity } from "lucide-react";
+import { Task, TaskPriority, TaskStatus } from "@shared/tasks";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
