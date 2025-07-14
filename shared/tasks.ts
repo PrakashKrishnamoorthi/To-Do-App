@@ -1,5 +1,7 @@
 export type TaskPriority = "low" | "medium" | "high";
 
+export type TaskStatus = "not_started" | "in_progress" | "completed";
+
 export type TaskFilter = "all" | "active" | "completed";
 
 export interface Task {
