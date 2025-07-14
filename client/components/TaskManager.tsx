@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { CheckSquare, Settings, Plus } from "lucide-react";
 import { useTaskReducer } from "@/hooks/useTaskReducer";
 import { useTaskPersistence } from "@/hooks/useTaskPersistence";
