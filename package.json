@@ -4,6 +4,11 @@
   "description": "A modern, beautiful task management application built with React, TypeScript, and Tailwind CSS",
   "private": true,
   "type": "module",
+  "homepage": "./",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "pkg": {
     "assets": [
       "dist/spa/*"
