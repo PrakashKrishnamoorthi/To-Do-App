@@ -72,6 +72,7 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
   const handleCancel = () => {
     setTitle("");
     setPriority("medium");
+    setStatus("not_started");
     setDueDate("");
     setIsExpanded(false);
   };
