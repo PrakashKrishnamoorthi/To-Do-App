@@ -119,7 +119,11 @@ export const TaskManager: React.FC<TaskManagerProps> = ({ className }) => {
 
           {/* Add Task Form */}
           <div ref={addTaskFormRef}>
-            <AddTaskForm onAddTask={actions.addTask} />
+            <AddTaskForm
+              onAddTask={actions.addTask}
+              isExpanded={isAddTaskExpanded}
+              onExpandedChange={setIsAddTaskExpanded}
+            />
           </div>
 
           {/* Error Display */}
